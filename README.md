@@ -15,12 +15,6 @@ füge folgendes in die `pom.xml` ein:
         <scope>test</scope>
     </dependency>
 
-    <dependency>
-        <groupId>org.jbehave.web</groupId>
-        <artifactId>jbehave-web-selenium</artifactId>
-        <version>3.5.5</version>
-    </dependency>
-
 wie JUnit5 Support realisiert wird kann ich bisher nicht sagen, aber es sieht auch nicht gut aus.
 
 ## Runner
