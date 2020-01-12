@@ -39,4 +39,9 @@ public class StepDefinition {
         assertEquals(title, driver.getTitle());
     }
 
+    @Then("sollte das Ergebnis $result lauten")
+    public void ergebnisStimmt(String title) {
+        assertEquals(title, driver.findElement(By.id("result")).getText());
+    }
+
     }

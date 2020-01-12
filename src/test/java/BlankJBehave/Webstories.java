@@ -53,6 +53,7 @@ public class Webstories extends JUnitStories {
         return new InstanceStepsFactory(configuration(), new StepDefinition());
     }
 
+    @Override
     protected List<String> storyPaths() {
         return new StoryFinder().findPaths(codeLocationFromClass(this.getClass()).getFile(), "**/*.story", null);
     }
