@@ -41,7 +41,7 @@ Wenn die gleiche Konfiguration für mehrere Stories benutzt wird, leitet man von
 in unserer neuen Klasse müssen nun die `public Configuration configuration()`-Methode und die
 `public InjectableStepsFactory stepsFactory()`-Methode definiert werden. 
 
-In `config()` wird das Verhalten des Frameworks bestimmt, e.g. welche Schlüsselwörter beachte ich beim parsen der Stories. 
+In `config()` wird das Verhalten des Frameworks bestimmt, e.g. welche Schlüsselwörter beim parsen der Stories genutzt werden. 
 
 Und in `stepsFactory()` werden die Schrittdefinitionen eingetragen.
 
@@ -49,13 +49,10 @@ Für ein Many to one mapping mittels der JUnitStoriesKlasse muss auch noch `prot
 
 Darin wird festgelegt wo die Storydateien zu finden sind.
 
+Die Schrittdefinitionen werden mit `@Given`-, `@When`- bzw. `@Then`-Annotationen markiert.
+Die Annotation nimmt als Parameter einen String der Beschreibt welcher Text aus einer Userstory gematcht werden soll.
+z.B. matcht eine mit `@Given("ein $farbe Auto")` markierte Funktion (wenn die Locale richtig eingestellt wurde) z.B. den Text "Gegeben ein grünes Auto". 
+Dabei kann `$farbe` der Funktion direkt als Parameter `String farbe` übergeben werden
 
-Rest ist TODO
+Mittels `@BeforeScenario` bzw. `@AfterScenario` kann man auch SetUp und TearDown organisieren
 
-## Schrittdefinitionen
-
-sehen im Großen und Ganzen aus wie in Cucumber
-
-## Userstories
-
-sehen im Großen und Ganzen aus wie in Cucumber
