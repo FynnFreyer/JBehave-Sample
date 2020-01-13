@@ -1,3 +1,5 @@
+# [JBehave](https://jbehave.org/reference/stable/)
+
 ## Installation
 füge folgendes in die `pom.xml` ein:
 
@@ -9,15 +11,21 @@ füge folgendes in die `pom.xml` ein:
     </dependency>
 
     <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-java</artifactId>
+        <version>3.141.59</version>
+    </dependency>
+
+    <dependency>
         <groupId>org.jbehave</groupId>
         <artifactId>jbehave-core</artifactId>
         <version>4.6.1</version>
         <scope>test</scope>
     </dependency>
 
-wie JUnit5 Support realisiert wird kann ich bisher nicht sagen, aber es sieht auch nicht gut aus.
+wie JUnit5 Support realisiert wird kann ich nicht sagen, es sieht schlecht aus.
 
-## Runner
+## Nutzung
 
 Zu Beginn definieren wir eine leere Klasse, in `src.test.java.${Projektname}` die als Einstiegspunkt für JUnit fungiert.
 Darin wird auch die Konfiguration vorgenommen. 
@@ -50,3 +58,9 @@ Dabei kann `$farbe` der Funktion direkt als Parameter `String farbe` übergeben 
 
 Mittels `@BeforeScenario` bzw. `@AfterScenario` kann man auch SetUp und TearDown organisieren
 
+## Reporting
+
+JBehave unterstützt als Ausgabeformate TXT, HTML (auch basierend auf Templatedateien), Xml und vieles mehr.
+Die Auswahl findet in der Runnerklasse mithilfe eines `StoryReporterBuilder` statt.
+
+Reports werden unter `./target/jbehave/` abgelegt.

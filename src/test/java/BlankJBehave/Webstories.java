@@ -41,7 +41,7 @@ public class Webstories extends JUnitStories {
                         .withCodeLocation(codeLocation)
                         .withPathResolver(new FilePrintStreamFactory.ResolveToSimpleName())
                         .withDefaultFormats()
-                        .withFormats(CONSOLE, TXT, HTML, XML)
+                        .withFormats(CONSOLE, HTML)
                         .withViewResources(properties)
                         .withFailureTrace(true)
                         .withKeywords(keywords));
